@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<meta name="viewport" content="width=device-width", initial-scale="1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<title>JSP 게시판 웹사이트</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+		<form method="post" action="writeAction.jsp">
+			<table class="table table-striped" style="width:80%;text-align: center; border: 1px solic #dddddd">
+				<thead>
+					<tr>
+						<th colspan="2" style="background-color: #eeeeee; text-align: center;">게시판 글쓰기 양식</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+                        <td>
+                            <select name="content" style="width:30%;">
+                                <option value="공지사항">공지사항</option>
+                                <option value="맛집추천">맛집추천</option>
+                                <option value="자유게시판">자유게시판</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </td>
+						<td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width:50%"></td>
+					</tr>
+					<tr>
+                        <td></td>
+						<td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="width:50%;height: 350px;"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+				<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+			</form>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
